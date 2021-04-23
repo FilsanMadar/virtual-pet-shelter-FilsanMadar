@@ -34,7 +34,32 @@ public class VirtualPetShelterTest {
 
     }
 
-    
+    @Test
+    public void shouldBeAbleToAdoptPetFromTheShelter() {
+        VirtualPetShelter underTest = new VirtualPetShelter();
+        VirtualPet myPet = new VirtualPet("Bulma", "Russian Blue");
+        VirtualPet myPet2 = new VirtualPet("Arasu", "Black Lab");
+        underTest.addPetToShelter(myPet);
+        underTest.addPetToShelter(myPet2);
+        underTest.removePetFromShelter("Bulma");
+        int check = underTest.getSize();
+        assertEquals(1, check);
+    }
+
+    @Test
+    public void petHungerShouldReturnToZeroAfterItHasBeenFed() {
+        VirtualPetShelter underTest = new VirtualPetShelter();
+        VirtualPet myPet = new VirtualPet("Bulma", "Russian Blue");
+        VirtualPet myPet2 = new VirtualPet("Arasu", "Black Lab");
+        underTest.addPetToShelter(myPet);
+        underTest.addPetToShelter(myPet2);
+        underTest.feedPets();
+        int check = myPet.getHungerLevel();
+        int check2 = myPet2.getHungerLevel();
+        assertEquals(0, check);
+        assertEquals(0, check2);
+    }
+
 }
 
 

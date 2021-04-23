@@ -23,4 +23,14 @@ public class VirtualPetShelter {
     public int getSize() {
         return shelter.size();
     }
+
+    public void removePetFromShelter(String name) {
+        shelter.remove(name);
+    }
+
+    public void feedPets() {
+        for (VirtualPet pet : pets()) {
+            pet.feedPets();
+        }
+    }
 }
