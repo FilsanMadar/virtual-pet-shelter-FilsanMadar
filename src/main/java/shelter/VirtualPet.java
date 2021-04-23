@@ -2,14 +2,21 @@ package shelter;
 
 public class VirtualPet {
 
-    private String virtualPetBreed;
-    private String cage;
-    private int age;
+    private String name;
+    private int hunger;
+    private int water;
+    private int play;
 
-    public VirtualPet(String virtualPetBreed, String cage, int age) {
-        this.virtualPetBreed = virtualPetBreed;
-        this.cage = cage;
-        this.age = age;
+    public String getPetName() {
+        return name;
+    }
+    public VirtualPet(String name, int hunger, int water, int play) {
+        this.name = name;
+        this.hunger = hunger;
+        this.water = water;
+        this.play = play;
 
     }
+
+
 }
