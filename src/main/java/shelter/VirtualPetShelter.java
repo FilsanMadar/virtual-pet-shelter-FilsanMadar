@@ -53,8 +53,9 @@ public class VirtualPetShelter {
     }
 
     public void stats(){
-        System.out.println(" Name Hunger Thirst Boredome ");
+        System.out.println(" Name \tHunger \tThirst \tBoredom ");
         for (VirtualPet pet: pets()) {
+            String name;
             System.out.println( pet.getName() + "\tHunger: " + pet.getHungerLevel() + "\tThirsty: " + pet.getThirstLevel() + "\tBoredom: " + pet.getBoredomLevel());
         }
     }

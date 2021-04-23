@@ -28,7 +28,7 @@ public class VirtualPet {
     }
 
     public void stats(){
-        System.out.println("Hunger: " + hungerLevel + "/nThirsty: " + thirstLevel + "/nBoredom: " + boredomLevel );
+        System.out.println( "Hunger: " + hungerLevel + "/nThirsty: " + thirstLevel + "/nBoredom: " + boredomLevel );
     }
 
     public String getName(){

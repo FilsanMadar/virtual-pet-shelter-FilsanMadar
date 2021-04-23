@@ -30,7 +30,7 @@ public class VirtualPetShelterApp {
             System.out.println("Select 1 to intake a pet to the shelter. ");
             System.out.println("Select 2 to adopt a pet. ");
             System.out.println("Select 3 to feed a pet. ");
-            System.out.println("Select 4 to play with a pet water. ");
+            System.out.println("Select 4 to give pet water. ");
             System.out.println("Select 5 to play with a pet. ");
 
             select = input.nextInt();
