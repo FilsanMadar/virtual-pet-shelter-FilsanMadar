@@ -20,4 +20,7 @@ public class VirtualPetShelter {
         shelter.put(myPet.getName(), myPet);
     }
 
+    public int getSize() {
+        return shelter.size();
+    }
 }

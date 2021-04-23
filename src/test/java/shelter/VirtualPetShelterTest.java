@@ -27,25 +27,14 @@ public class VirtualPetShelterTest {
     @Test
     public void shouldBeAbleToIntakePetToTheShelter() {
         VirtualPet myPet = new VirtualPet("Bulma", 50, 50, 50);
-        VirtualPet myPet2 = new VirtualPet("Arasu", 50, 50, 50);
-        int beginningSize = underTest.getAllPets().size();
+        VirtualPetShelter underTest = new VirtualPetShelter();
         underTest.addPetToShelter(myPet);
-        underTest.addPetToShelter(myPet2);
-        int endingSize = underTest.getAllPets().size();
-        assertTrue(endingSize > beginningSize);
-    }
-
-    //adoption//
-    @Test
-    public void shouldBeAbleToAdoptPetsFromShelter(){
-        VirtualPet myPet = new VirtualPet("Bulma", 50, 50, 50);
-        int beginningSize = underTest.getAllPets().size();
-        underTest.addPetToShelter(myPet);
-        underTest.removePetFromShelter(myPet);
-        int endingSize = underTest.getAllPets().size();
-        assertTrue(endingSize < beginningSize);
+        int check = underTest.getSize();
+        assertEquals(1, check);
 
     }
+
+    
 }
 
 
