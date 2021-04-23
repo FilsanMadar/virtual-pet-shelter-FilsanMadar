@@ -6,12 +6,13 @@ public class VirtualPet {
 
     private String name;
     private String type;
-    private int hungerLevel = 10;
-    private int thirstLevel = 10;
-    private int boredomLevel = 10;
+    private int hungerLevel;
+    private int thirstLevel;
+    private int boredomLevel;
 
-    public VirtualPet(String name, int hungerLevel, int thirstLevel, int boredomLevel) {
+    public VirtualPet(String name, String type, int hungerLevel, int thirstLevel, int boredomLevel) {
         this.name = name;
+        this.type = type;
         this.hungerLevel = hungerLevel;
         this.thirstLevel = thirstLevel;
         this.boredomLevel = boredomLevel;
@@ -21,6 +22,9 @@ public class VirtualPet {
     public VirtualPet(String name, String type) {
         this.name = name;
         this.type = type;
+        this.hungerLevel = 20;
+        this.boredomLevel = 20;
+        this.thirstLevel = 20;
     }
 
     public void stats(){
@@ -46,7 +50,7 @@ public class VirtualPet {
         if (hungerLevel >= 10){
             hungerLevel -= 10;
         } else {
-            hungerLevel = 0;
+            hungerLevel = 10;
         }
     }
 
@@ -54,7 +58,7 @@ public class VirtualPet {
         if (thirstLevel >= 10) {
             thirstLevel -= 10;
         } else {
-            thirstLevel = 0;
+            thirstLevel = 20;
         }
     }
 
@@ -62,7 +66,7 @@ public class VirtualPet {
         if (boredomLevel >= 10) {
             boredomLevel -= 10;
         } else {
-            boredomLevel = 0;
+            boredomLevel = 20;
         }
     }
 

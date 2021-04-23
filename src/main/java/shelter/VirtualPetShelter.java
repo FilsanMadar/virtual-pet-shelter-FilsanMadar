@@ -6,27 +6,28 @@ import java.util.Map;
 
 public class VirtualPetShelter {
 
-    Map<String, VirtualPet> underTest = new HashMap<String, VirtualPet>();
+    Map<String, VirtualPet> shelter = new HashMap<String, VirtualPet>();
 
+    public void removePetFromShelter(String name) {
+        shelter.remove(name);
+    }
     public Collection<VirtualPet> pets() {
-        return underTest.values();
+        return shelter.values();
     }
 
     public VirtualPet getPet(String name) {
-        return underTest.get(name);
+        return shelter.get(name);
     }
 
     public void addPetToShelter(VirtualPet myPet) {
-        underTest.put(myPet.getName(), myPet);
+        shelter.put(myPet.getName(), myPet);
     }
+
 
     public int getSize() {
-        return underTest.size();
+        return shelter.size();
     }
 
-    public void removePetFromShelter(String name) {
-        underTest.remove(name);
-    }
 
     public void feedPets() {
         for (VirtualPet pet : pets()) {
@@ -41,7 +42,7 @@ public class VirtualPetShelter {
     }
 
     public void playWithPet(String name) {
-        VirtualPet getPet = underTest.get(name);
+        VirtualPet getPet = shelter.get(name);
         getPet.play();
     }
 
@@ -51,12 +52,12 @@ public class VirtualPetShelter {
         }
     }
 
-    public void playWithPet() {
+    public void stats(){
+        System.out.println(" Name Hunger Thirst Boredome ");
+        for (VirtualPet pet: pets()) {
+            System.out.println( pet.getName() + "\tHunger: " + pet.getHungerLevel() + "\tThirsty: " + pet.getThirstLevel() + "\tBoredom: " + pet.getBoredomLevel());
+        }
     }
 
-    public void removePetFromShelter() {
-    }
 
-    public void addPetToShelter() {
-    }
 }
