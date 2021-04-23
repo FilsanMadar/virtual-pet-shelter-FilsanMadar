@@ -23,7 +23,6 @@ public class VirtualPetShelterTest {
         Collection<VirtualPet> pets = underTest.pets();
     }
 
-    //intake//
     @Test
     public void shouldBeAbleToIntakePetToTheShelter() {
         VirtualPet myPet = new VirtualPet("Bulma", 10, 10, 10);
@@ -100,12 +99,12 @@ public class VirtualPetShelterTest {
         int check4 = myPet2.getBoredomLevel();
         int check5 = myPet2.getThirstLevel();
         int check6 = myPet2.getHungerLevel();
-        assertEquals(10, check);
-        assertEquals(10, check2);
-        assertEquals(10, check3);
-        assertEquals(10, check4);
-        assertEquals(10, check5);
-        assertEquals(10, check6);
+        assertEquals(20, check);
+        assertEquals(20, check2);
+        assertEquals(20, check3);
+        assertEquals(20, check4);
+        assertEquals(20, check5);
+        assertEquals(20, check6);
     }
 }
 

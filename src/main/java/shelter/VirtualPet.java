@@ -6,9 +6,26 @@ public class VirtualPet {
 
     private String name;
     private String type;
-    private int hungerLevel;
-    private int thirstLevel;
-    private int boredomLevel;
+    private int hungerLevel = 10;
+    private int thirstLevel = 10;
+    private int boredomLevel = 10;
+
+    public VirtualPet(String name, int hungerLevel, int thirstLevel, int boredomLevel) {
+        this.name = name;
+        this.hungerLevel = hungerLevel;
+        this.thirstLevel = thirstLevel;
+        this.boredomLevel = boredomLevel;
+
+    }
+
+    public VirtualPet(String name, String type) {
+        this.name = name;
+        this.type = type;
+    }
+
+    public void stats(){
+        System.out.println("Hunger: " + hungerLevel + "/nThirsty: " + thirstLevel + "/nBoredom: " + boredomLevel );
+    }
 
     public String getName(){
         return name;
@@ -24,20 +41,6 @@ public class VirtualPet {
     public int getBoredomLevel(){
         return boredomLevel;
     }
-
-    public VirtualPet(String name, int hungerLevel, int thirstLevel, int boredomLevel) {
-        this.name = name;
-        this.hungerLevel = hungerLevel;
-        this.thirstLevel = thirstLevel;
-        this.boredomLevel = boredomLevel;
-
-    }
-
-    public VirtualPet(String name, String type) {
-        this.name = name;
-        this.type = type;
-    }
-
 
     public void feedPets() {
         if (hungerLevel >= 10){
