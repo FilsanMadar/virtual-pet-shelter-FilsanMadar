@@ -40,8 +40,32 @@ public class VirtualPet {
 
 
     public void feedPets() {
-        if (hungerLevel >= 5){
-            hungerLevel -= 5;
-        } else (hungerLevel = 0);
+        if (hungerLevel >= 10){
+            hungerLevel -= 10;
+        } else {
+            hungerLevel = 0;
+        }
+    }
+
+    public void giveWater() {
+        if (thirstLevel >= 10) {
+            thirstLevel -= 10;
+        } else {
+            thirstLevel = 0;
+        }
+    }
+
+    public void play() {
+        if (boredomLevel >= 10) {
+            boredomLevel -= 10;
+        } else {
+            boredomLevel = 0;
+        }
+    }
+
+    public void tick() {
+        hungerLevel += 10;
+        thirstLevel += 10;
+        boredomLevel += 10;
     }
 }

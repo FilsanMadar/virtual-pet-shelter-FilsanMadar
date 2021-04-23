@@ -33,4 +33,21 @@ public class VirtualPetShelter {
             pet.feedPets();
         }
     }
+
+    public void waterToPets() {
+        for (VirtualPet pet : pets()) {
+            pet.giveWater();
+        }
+    }
+
+    public void playWithPet(String name) {
+        VirtualPet getPet = shelter.get(name);
+        getPet.play();
+    }
+
+    public void groupTick() {
+        for (VirtualPet pet: pets()) {
+            pet.tick();
+        }
+    }
 }
