@@ -25,6 +25,8 @@ public class VirtualPetShelterApp {
         int select;
 
         while (true) {
+            Scanner input2 = new Scanner(System.in);
+
             System.out.println("Please select a number between 0 - 4 so we can take care of our pets! ");
             System.out.println("Select 0 to Quit. ");
             System.out.println("Select 1 to intake a pet to the shelter. ");
@@ -39,14 +41,15 @@ public class VirtualPetShelterApp {
                 System.out.println("Quit the program");
                 System.exit(0);
             } else if (select == 1) {
-                System.out.println("Enter the name of the pet you want to intake into the shelter.");
-                String petName = input.nextLine();
+                System.out.println("Enter the name of the pet you want to intake into the shelter. It is always great to see our family grow here at the shelter. ");
+                String petName = input2.nextLine();
                 VirtualPet newPet = new VirtualPet(petName, "dog");
                 petShelter.addPetToShelter(newPet);
             } else if (select == 2) {
-                System.out.println("Enter the name of the pet you want to adopt.");
-                String petName = input.nextLine();
+                System.out.println("Enter the name of the pet you want to adopt. We really appreciate you adopting from our shelter.");
+                String petName = input2.nextLine();
                 petShelter.removePetFromShelter(petName);
+                System.out.println( " We appreciate you adopting from our shelter." );
             } else if (select == 3) {
                 petShelter.feedPets();
                 System.out.println("We just feed our pets.");
@@ -54,8 +57,8 @@ public class VirtualPetShelterApp {
                 petShelter.waterToPets();
                 System.out.println("We just gave our pets water.");
             } else if (select == 5) {
-                System.out.println("Enter the name of the pet you want to play with.");
-                String petName = input.nextLine();
+                System.out.println("Enter the name of the pet you want to play with. I know that they will be super tired by the end of it.");
+                String petName = input2.nextLine();
                 petShelter.playWithPet(petName);
             }
             petShelter.stats();
